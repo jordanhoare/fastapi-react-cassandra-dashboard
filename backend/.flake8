@@ -1,0 +1,7 @@
+[flake8]
+max-line-length = 99
+max-complexity = 10
+ignore = B008, E501, C901, F821, W503, B010
+per-file-ignores =
+    app/application.py:F841
+    __init__.py:F401
