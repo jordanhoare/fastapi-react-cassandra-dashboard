@@ -19,7 +19,7 @@ RUN rm -rf poetry.lock
 RUN poetry install --no-interaction --ansi --no-root
 
 # expose the port that uvicorn will run the app on
-EXPOSE 80
+EXPOSE 8000
 
 # execute the command python main.py (in the WORKDIR) to start the app
 ENV PYTHONPATH=/app
