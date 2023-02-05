@@ -2,11 +2,15 @@
 # React, FastAPI & Cassandra
 
 
-The goal of this repo was to expand on my understanding of React for building user interfaces, and learn about the intricacies of Cassandra for use in highly scalable systems of applications.  FastAPI/Python was used to serve CQL queries and routes to React, aswell as kick off a data generator (args: number of records).  This repo follows on from my [CQL study](https://github.com/jordanhoare/cql-study).
+[WIP] The goal of this repo was to expand on my understanding of React for building user interfaces, and learn about the intricacies of Cassandra for use in highly scalable systems of applications.  FastAPI/Python was used to serve CQL queries and routes to React, aswell as kick off a data generator (args: number of records).  This repo follows on from my [CQL study](https://github.com/jordanhoare/cql-study).
 
 Each technology in this repo is containerised into a network, so it is reproducible even without the below mentioned package managers and runtime frameworks.  Simply clone the repo and spin up the docker repo with ```docker-compose build -d --build```.
 
 I based the data modelling and dashboard desing on a hypothetical scenario of a Car Rental company that operates nationwide, allowing for a variety of table and query options. 
+
+<br>
+
+<img src="/docs/dashboard.jpg" alt="Dashboard screenshot" title="Dashboard screenshot">
 
 <br>
 
