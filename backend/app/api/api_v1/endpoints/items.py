@@ -1,6 +1,6 @@
 import logging
 import uuid
-from typing import Any
+from typing import Any, List
 
 import pandas as pd
 from cassandra.concurrent import execute_concurrent_with_args
@@ -96,3 +96,14 @@ async def generate_dummy_data(records: int, session=Depends(get_session)) -> Lis
     except Exception as e:
         raise HTTPException(status_code=404, detail=e)
         logger.error(e)
+
+
+@router.delete("")
+async def delete_rentals_table(session=Depends(get_session)) -> Any:
+    """Select dashboard items and serve them front pydantic"""
+    session.execute("DROP TABLE IF EXISTS cql_keyspace.rentals;")
+    try:
+        results = session.execute("SELECT * FROM cql_keyspace.rentals;")
+        return list(result)
+    except Exception:
+        pass

@@ -42,13 +42,13 @@ class DataGenerator(object):
         Generate random rental out and in datetimes
         Time out > time in by atleast 1 day
         """
-        now = datetime.datetime.now()
+        now = datetime.now()
         random_start_day = random.randint(1, 28)
         random_end_day = random.randint(random_start_day + 1, 29)
         random_start_hour = random.randint(8, 17)
         random_end_hour = random.randint(8, 17)
-        end_date = now - datetime.timedelta(days=random_start_day, hours=random_start_hour)
-        start_date = now - datetime.timedelta(days=random_end_day, hours=random_end_hour)
+        end_date = now - timedelta(days=random_start_day, hours=random_start_hour)
+        start_date = now - timedelta(days=random_end_day, hours=random_end_hour)
         return (start_date, end_date)
 
     @staticmethod
